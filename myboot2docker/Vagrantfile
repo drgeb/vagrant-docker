@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 # Specify Vagrant version and Vagrant API version
-Vagrant.require_version ">= 1.6.0"
+#Vagrant.require_version ">= 1.6.0"
 VAGRANTFILE_API_VERSION = "2"
 
 # Create and configure the VM(s)
@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Spin up a "host box" for use with the Docker provider
   # and then provision it with Docker
-  config.vm.box = "ubuntu/vivid64"
+  config.vm.box = "ubuntu/trusty64"
   config.vm.provision "docker"
 
   # Disable synced folders (prevents an NFS error on "vagrant up")
